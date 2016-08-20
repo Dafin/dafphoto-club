@@ -3,7 +3,7 @@ class Photo < ActiveRecord::Base
   has_many :likes #redundant just for counting? join table used ? caching?
   has_many :users_who_liked, through: :likes, class_name: "User", foreign_key: :user_id, source: :user, required:false
 
-  # mount_uploader :image_uri, ImageUploader
+  mount_uploader :image, ImageUploader
 
   def amount_of_likes
     self.likes.count

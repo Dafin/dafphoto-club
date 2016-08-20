@@ -1,17 +1,23 @@
 Rails.application.routes.draw do
-  get 'photos/index'
+  devise_for :users
+  # get 'photos/index'
 
-  get 'photos/show'
+  # get 'photos/show'
 
-  get 'photos/new'
+  # get 'photos/new'
 
-  get 'photos/create'
+  # get 'photos/create'
 
-  get 'photos/edit'
+  # get 'photos/edit'
 
-  get 'photos/update'
+  # get 'photos/update'
 
-  get 'photos/destroy'
+  # get 'photos/destroy'
+
+
+  resources :photos
+
+  # all encompasing 8 (not 7) restful routes  (put, patch) = update
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
