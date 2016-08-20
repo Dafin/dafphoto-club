@@ -8,6 +8,17 @@
 </head>
 <body>
 
+  <%unless current_user.nil? %>
+
+    Welcome <%= current_user.email %> 
+    Hi!!!!
+
+  <% else  %> else!!!!
+
+
+  <% end %>
+
+
 <%= yield %>
 
 </body>

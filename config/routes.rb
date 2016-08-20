@@ -17,6 +17,9 @@ Rails.application.routes.draw do
 
   resources :photos
 
+
+  root to: 'photos#index'
+
   # all encompasing 8 (not 7) restful routes  (put, patch) = update
 
   # The priority is based upon order of creation: first created -> highest priority.
