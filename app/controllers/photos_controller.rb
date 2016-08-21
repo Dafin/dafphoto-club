@@ -1,5 +1,10 @@
 class PhotosController < ApplicationController
   def index
+    @photo = Photo.new 
+    @photos = current_user.photos
+
+
+
   end
 
   def show
@@ -9,6 +14,8 @@ class PhotosController < ApplicationController
   end
 
   def create
+    p = Photo.create(params.require(:photo).permit(:image).merge(user: current_user))
+    binding.pry
   end
 
   def edit

@@ -1,2 +1,14 @@
 <h1>Photos#index</h1>
 <p>Find me in app/views/photos/index.html.erb    ok!!!!</p>
+
+<% @photos.each do |photo| %>
+  <%= image_tag photo.image.url(:thumb) %>
+<% end %>
+
+<%= form_for @photo do |f|%>
+  <!-- <form method=post enctype="multipart/form-data" action="/photos"> -->
+  <%= f.file_field :image %>
+  <!-- file to upload: <input type=file name="upfile"><br> -->
+  <%= f.submit %>
+<input type=submit value="submit">
+<% end %>
