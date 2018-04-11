@@ -15,7 +15,6 @@ class PhotosController < ApplicationController
 
   def create
     p = Photo.create(params.require(:photo).permit(:image).merge(user: current_user))
-    binding.pry
   end
 
   def edit
